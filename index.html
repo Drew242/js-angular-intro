@@ -6,12 +6,24 @@
             type="text/javascript"></script>
     <script src="main.js" type="text/javascript"></script>
   </head>
-  <body ng-controller="alpha">
+  <body>
 
-    <h1>!!!! ---- {{ greeting }} ---- !!!!</h1>
-    <h3 ng-bind="subGreeting"></h3>
+    <div ng-controller="alpha">
 
-    <button ng-click="fightPutty()">Fight putty</button> 
+      <h1>!!!! ---- {{ greeting }} ---- !!!!</h1>
+      <h3 ng-bind="subGreeting"></h3>
+
+      <button ng-click="fightPutty()">Fight putty</button>
+
+    </div>
+
+    <div ng-controller="betaCtrl as beta">
+      <h1>{{ beta.beans }}</h1>
+      <input type="text" placeholder="favorite beans" ng-model='beta.myFavoriteBeans'/>
+      <button ng-click="beta.addBeans()">Add Beans</button>
+      <p ng-repeat="beans in beta.myBeans track by $index">{{ beans }}</p>
+      <button ng-click="beta.removeBean()">Remove a Bean</button>
+    </div>
 
   </body>
 </html>

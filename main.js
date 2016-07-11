@@ -17,6 +17,10 @@ angular.module('helloModule')
       alphaCtrl
   ]);
 
+angular.module('helloModule')
+  // the final method in the injector MUST be a function that represent the controller itself
+  .controller('betaCtrl', betaCtrl); // this is the object that will expose data to the view);
+
   // This is the funciton that represents the controller
   // Must pass, as parameters, the dependencies injected above
   function alphaCtrl($scope){
@@ -25,4 +29,20 @@ angular.module('helloModule')
     $scope.fightPutty = function() {
       $scope.subGreeting = 'punch noises';
     }
+  }
+
+  function betaCtrl(){
+    var beta        = this;
+    beta.beans      = 'Black Beans';
+
+    beta.myBeans    = [];
+
+    beta.addBeans = function(myFavoriteBeans){
+      beta.myBeans.push(beta.myFavoriteBeans);
+    }
+    beta.removeBean = function() {
+      beta.myBeans.pop();
+    }
+    window.beta = beta;
+    // this is for debugging and allows you to type Angular into the console
   }
