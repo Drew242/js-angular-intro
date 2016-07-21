@@ -1,40 +1,16 @@
 <!DOCTYPE html>
-<html ng-app='PokeApp'>
+<html ng-app='Chuckuthon'>
   <head>
     <title>Angular Practice</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"
-            type="text/javascript"></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js'></script>
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js'></script> -->
     <script src="main.js" type="text/javascript"></script>
+    <link rel='stylesheet' href='main.css'/>
   </head>
-  <body ng-controller="PallettTown as pCtrl">
-<!--
-    <h1>{{ pCtrl.welcomeMessage }}</h1>
-
-    <ul>
-      <li ng-repeat="p in pCtrl.pokemon">{{ p }} - {{ $index }}</li>
-    </ul>
-
-    <div ng-repeat="(jkey, jval) in pCtrl.jigglypuff">
-
-      <h3>{{ jkey }}</h3>
-      <h5>{{ jval }}</h5>
-      <hr>
-
-    </div> -->
-
-    <ul>
-      <li ng-repeat="p in pCtrl.clonedPokemon track by $index">{{ p }} {{ $index }}</li>
-    </ul>
-
-    <ul>
-      <li ng-repeat='t in pCtrl.trainers'>
-        <h3>{{ t.name }}</h3>
-        <p>Skillz : {{ t.skill }}</p>
-        <ul>
-          <li ng-repeat='b in t.badges'>{{ b }}</li>
-        </ul>
-      </li>
-    </ul>
+  <body ng-controller="ChuckingAwesomeController as cAc">
 
   </body>
 </html>
