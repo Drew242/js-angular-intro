@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='Chuckuthon'>
   <head>
-    <title>Angular Practice</title>
+    <title>Chuck App</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
@@ -10,7 +10,9 @@
     <script src="main.js" type="text/javascript"></script>
     <link rel='stylesheet' href='main.css'/>
   </head>
-  <body ng-controller="ChuckingAwesomeController as cAc">
-
+  <body ng-controller="ChuckingAwesomeController as chuck">
+    <h1>{{ chuck.title }}</h1>
+    <button type='button' ng-click='chuck.newJoke()'>New Quote</button>
+    <p>{{ chuck.quote }}</p>
   </body>
 </html>
